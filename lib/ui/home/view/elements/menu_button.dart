@@ -45,11 +45,13 @@ class MenuButton extends StatelessWidget {
 
   static const List<Choice> choices = const <Choice>[
     const Choice(
-        title: Strings.education, icon: Icons.account_balance_outlined),
-    const Choice(title: Strings.workHistory, icon: Icons.work_outline_outlined),
+        title: Strings.personalSummary, icon: Icons.accessibility_new_sharp),
     const Choice(
-        title: Strings.personalInterests, icon: Icons.accessibility_new_sharp),
+        title: Strings.education, icon: Icons.account_balance_outlined),
+    const Choice(title: Strings.experience, icon: Icons.work_outline_outlined),
     const Choice(title: Strings.athleticCareer, icon: Icons.sports_basketball),
+    const Choice(title: Strings.trips, icon: Icons.airplanemode_active),
+    const Choice(title: Strings.blogPod, icon: Icons.mic),
   ];
 
   void _handleClick(Choice choice) {
@@ -57,10 +59,10 @@ class MenuButton extends StatelessWidget {
       case Strings.education:
         presenter.eventEducationSelected();
         break;
-      case Strings.personalInterests:
+      case Strings.personalSummary:
         presenter.eventPersonalInterestSelected();
         break;
-      case Strings.workHistory:
+      case Strings.experience:
         presenter.eventWorkHistorySelected();
         break;
       case Strings.athleticCareer:

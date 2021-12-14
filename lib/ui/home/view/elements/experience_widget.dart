@@ -64,20 +64,37 @@ class ExperienceWidget extends StatelessWidget {
               Spacer(),
             ],
           ),
-          SizedBox(height: 16),
-
-          //TODO: decide on list builder or column of rows
+          SizedBox(height: 8),
+          _buildResponsibilityList(responsibilitiesList)
         ],
       ),
     );
   }
 
-  static Widget greyDot() => Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8.0),
-        child: Icon(
-          Icons.circle,
-          color: Colors.grey,
-          size: 6,
-        ),
-      );
+  static Widget _buildResponsibilityList(List<String> responsibilityList) {
+    return ListView.builder(
+      itemBuilder: (context, index) {
+        return Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          child: Text(
+            responsibilityList[index],
+            style: Constants.responsibilityListStyle,
+          ),
+        );
+      },
+      itemCount: responsibilityList.length,
+      shrinkWrap: true,
+    );
+  }
+
+  static Widget greyDot() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+      child: Icon(
+        Icons.circle,
+        color: Colors.grey,
+        size: 6,
+      ),
+    );
+  }
 }

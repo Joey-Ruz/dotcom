@@ -52,4 +52,7 @@ class Constants {
       locationStyle.copyWith(color: Colors.grey, fontWeight: FontWeight.w300);
 
   static final stdPillTitleStyle = TextStyle(color: Colors.white, fontSize: 16);
+
+  static final responsibilityListStyle =
+      TextStyle(fontSize: 16, color: Colors.black);
 }

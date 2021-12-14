@@ -32,6 +32,7 @@ class StandardPillSticker extends StatelessWidget {
           color: pillColor,
         ),
         child: Row(
+          mainAxisSize: MainAxisSize.min,
           children: [
             if (icon != null)
               Padding(

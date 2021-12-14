@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:personal_website/ui/main_router/assembly/main_router_assembly.dart';
 
 void main() {
+  print("wtf");
   WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
 }

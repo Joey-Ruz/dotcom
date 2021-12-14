@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:personal_website/repo/entities/course.dart';
 import 'package:personal_website/ui/utils/resources/constants.dart';
-import 'package:personal_website/ui/utils/standard_widgets/standard_pill_sticker.dart';
 
 class StandardEducationWidget extends StatelessWidget {
   final String? degree;
@@ -66,20 +65,23 @@ class StandardEducationWidget extends StatelessWidget {
           ],
         ),
         SizedBox(height: 16),
-        ListView.builder(
-          shrinkWrap: true,
-          itemCount: courseList.length,
-          itemBuilder: (context, index) {
-            return StandardPillSticker(
-              title: courseList[index].courseID +
-                  "  " +
-                  courseList[index].courseName,
-              pillColor: Colors.deepOrange,
-              borderColor: Colors.white,
-            );
-          },
-        )
+        // _buildCourseList(courseList),
       ],
     );
   }
+
+  // static Widget _buildCourseList(List<Course> courseList) {
+  //   return ListView.builder(
+  //     shrinkWrap: true,
+  //     itemCount: courseList.length,
+  //     itemBuilder: (context, index) {
+  //       return StandardPillSticker(
+  //         title:
+  //             courseList[index].courseID + "  " + courseList[index].courseName,
+  //         pillColor: Colors.deepOrange,
+  //         borderColor: Colors.white,
+  //       );
+  //     },
+  //   );
+  // }
 }
