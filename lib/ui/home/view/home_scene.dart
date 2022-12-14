@@ -49,13 +49,13 @@ class HomeScene extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                TitleSection(),
+                TitleSection(key: presenter.titleKey),
                 StandardDivider(indent: 40, topPadding: 8, bottomPadding: 24),
-                AboutMeSection(),
+                AboutMeSection(key: presenter.aboutMeKey),
                 StandardDivider(),
-                EducationSection(),
+                EducationSection(key: presenter.educationKey),
                 StandardDivider(),
-                ExperienceSection(),
+                ExperienceSection(key: presenter.experienceKey),
                 SizedBox(height: 60),
               ],
             ),
@@ -69,7 +69,10 @@ class HomeScene extends StatelessWidget {
           alignment: Alignment.topRight,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: MenuButton(presenter: presenter),
+            child: MenuButton(
+              presenter: presenter,
+              homeContext: context,
+            ),
           ),
         ),
         //
@@ -88,6 +91,10 @@ class HomeScene extends StatelessWidget {
   }
 
   Widget mobileScene(BuildContext context) {
-    return Container();
+    return Center(
+      child: Container(
+        child: Text("Mobile Scene"),
+      ),
+    );
   }
 }
