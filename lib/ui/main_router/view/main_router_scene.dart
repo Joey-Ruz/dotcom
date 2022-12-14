@@ -22,7 +22,6 @@ class MainRouterScene extends StatelessWidget {
         });
   }
 
-  // ignore: missing_return
   Widget? _childFromData(MainRouterPresenterOutput data) {
     switch (data.runtimeType) {
       case ShowHome:
