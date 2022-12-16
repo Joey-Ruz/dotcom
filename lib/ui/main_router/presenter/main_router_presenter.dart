@@ -25,25 +25,4 @@ class MainRouterPresenter extends StarterBloc<MainRouterPresenterOutput>
     _useCase.dispose();
     super.dispose();
   }
-
-  //Home Router
-  @override
-  void routeAthleticCareerSection() {
-    // TODO: implement routeAthleticCareerSection
-  }
-
-  @override
-  void routeEducationSection() {
-    // TODO: implement routeEducationSection
-  }
-
-  @override
-  void routeWorkHistorySection() {
-    // TODO: implement routeWorkHistorySection
-  }
-
-  @override
-  void routerPersonalInterestsSection() {
-    // TODO: implement routerPersonalInterestsSection
-  }
 }

@@ -1,28 +1,29 @@
 import 'package:flutter/material.dart';
 
-class CircularImage extends StatelessWidget {
-  final double width;
-  final double height;
+class StandardCircularImage extends StatelessWidget {
+  final double diameter;
   final String assetPath;
   final BoxDecoration? decoration;
+  final Color borderColor;
 
-  CircularImage(
-      {required this.assetPath,
-      this.width = 200,
-      this.height = 200,
-      this.decoration});
+  StandardCircularImage({
+    required this.assetPath,
+    this.diameter = 200,
+    this.decoration,
+    this.borderColor = Colors.black38,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: width,
-      height: height,
+      width: diameter,
+      height: diameter,
       decoration: decoration ??
           BoxDecoration(
             shape: BoxShape.circle,
             image: DecorationImage(
                 fit: BoxFit.cover, image: AssetImage(assetPath)),
-            border: Border.all(color: Colors.black38, width: 2.5),
+            border: Border.all(color: borderColor, width: 2.5),
           ),
     );
   }

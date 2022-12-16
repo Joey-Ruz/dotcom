@@ -3,7 +3,6 @@ class Strings {
   static const joe_y_Ruzevich = "Joe(y) Ruzevich";
   static const joe_y = "Joe(y)";
   static const joeyRuzevich = "Joey Ruzevich";
-  static const descriptorUnderName = "Software Engineer  //  Adventurer";
   static const ruzJoeyGmail = "ruzevich.joey@gmail.com";
   static const greaterChicagoland = "Greater Chicagoland Area, IL, USA";
 
