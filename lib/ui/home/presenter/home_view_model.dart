@@ -6,18 +6,25 @@ class HomeViewModel extends Equatable {
   final String? errorMessage;
   final MessageType? messageType;
   final bool isWaiting;
+  final int subSceneIndex;
 
-  HomeViewModel({
-    this.messageType,
-    this.errorMessage,
-    this.isWaiting = false,
-  });
+  HomeViewModel(
+      {this.messageType,
+      this.errorMessage,
+      this.isWaiting = false,
+      required this.subSceneIndex});
 
   HomeViewModel.fromPresentation(HomePresentationModel model)
       : errorMessage = model.errorMessage,
         messageType = model.messageType,
-        isWaiting = model.isWaiting;
+        isWaiting = model.isWaiting,
+        subSceneIndex = model.subSceneIndex;
 
   @override
-  List<Object?> get props => [messageType, errorMessage, isWaiting];
+  List<Object?> get props => [
+        messageType,
+        errorMessage,
+        isWaiting,
+        subSceneIndex,
+      ];
 }

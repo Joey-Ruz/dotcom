@@ -5,6 +5,7 @@ import 'home_presentation_model.dart';
 import 'home_use_case_output.dart';
 
 class HomeUseCase extends StarterBloc<HomeUseCaseOutput> {
+  int _subSceneIndex = 0;
   HomeUseCase() {
     initialize();
   }
@@ -19,7 +20,13 @@ class HomeUseCase extends StarterBloc<HomeUseCaseOutput> {
       isWaiting: wait,
       errorMessage: errorMessage,
       messageType: messageType,
+      subSceneIndex: _subSceneIndex,
     )));
+  }
+
+  void sectionOnTap(index) {
+    _subSceneIndex = index;
+    _refreshPresentation();
   }
 
   @override

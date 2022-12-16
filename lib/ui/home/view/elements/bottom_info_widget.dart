@@ -8,19 +8,21 @@ class BottomInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isCondensed = MediaQuery.of(context).size.width < 5000;
-    return normalLayout();
+    bool isCondensed = MediaQuery.of(context).size.width < 940;
+    return isCondensed ? condensedLayout() : normalLayout();
   }
 
   Widget condensedLayout() {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        locationWidget(),
-        SizedBox(height: 8),
-        emailWidget(),
-      ],
+    return Container(
+      color: Colors.red,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          locationWidget(),
+          SizedBox(height: 8),
+          emailWidget(),
+        ],
+      ),
     );
   }
 

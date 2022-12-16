@@ -10,7 +10,7 @@ class HomeAssembly {
 
   factory HomeAssembly(HomeRouter router) {
     final useCase = HomeUseCase();
-    final presenter = HomePresenter(useCase, router);
+    final presenter = HomePresenter(useCase);
     final scene = HomeScene(presenter);
 
     return HomeAssembly._(scene: scene);
