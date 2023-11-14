@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Constants {
+  static final boldAndItalic =
+      TextStyle(fontWeight: FontWeight.bold, fontStyle: FontStyle.italic);
+
+  static final italic = TextStyle(fontStyle: FontStyle.italic);
+
+  static final bold = TextStyle(fontWeight: FontWeight.bold);
+
   static final mainTextStyle = TextStyle(
     fontSize: 24,
     letterSpacing: 1.5,
@@ -8,6 +16,17 @@ class Constants {
     height: 1.5,
     color: Colors.grey,
   );
+
+  static final titleFont = GoogleFonts.lora(
+    textStyle: TextStyle(
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.italic,
+    ),
+  );
+  static final bodyFont = GoogleFonts.merriweather(
+    fontSize: 18.0,
+  );
+
   static const pageTransitionDuration = const Duration(milliseconds: 400);
 
   static final defaultInfoSectionTitleStyle = TextStyle(

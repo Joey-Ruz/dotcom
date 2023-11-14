@@ -13,16 +13,13 @@ class BottomInfo extends StatelessWidget {
   }
 
   Widget condensedLayout() {
-    return Container(
-      color: Colors.red,
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          locationWidget(),
-          SizedBox(height: 8),
-          emailWidget(),
-        ],
-      ),
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        emailWidget(),
+        SizedBox(height: 8),
+        locationWidget(),
+      ],
     );
   }
 

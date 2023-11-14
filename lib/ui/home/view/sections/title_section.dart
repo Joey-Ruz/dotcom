@@ -18,12 +18,12 @@ class TitleSection extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        SizedBox(height: 8),
+        SizedBox(height: 8.0),
         StandardCircularImage(
           assetPath: Strings.joeyVinka_AssetPath,
           diameter: 250,
         ),
-        SizedBox(height: 16),
+        SizedBox(height: 16.0),
         Text(
           Strings.joe_y,
           style: TextStyle(
@@ -33,7 +33,7 @@ class TitleSection extends StatelessWidget {
             color: Colors.grey[600],
           ),
         ),
-        SizedBox(height: 12),
+        SizedBox(height: 24.0),
         Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
